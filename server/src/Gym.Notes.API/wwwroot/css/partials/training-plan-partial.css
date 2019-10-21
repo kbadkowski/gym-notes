@@ -1,0 +1,45 @@
+﻿.training-plan-bg {
+    min-height: 800px;
+    position: relative;
+    z-index: 1;
+    background-image: url('../../images/training-plan-bg.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+    .training-plan-bg:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: #0a0a0a;
+        background: -moz-linear-gradient(right, rgba(10, 10, 10, 0.9) 0%, rgba(50, 50, 50, 0.2) 100%);
+        background: -webkit-linear-gradient(right, rgba(10, 10, 10, 0.9) 0%, rgba(50, 50, 50, 0.2) 100%);
+        background: linear-gradient(to right, rgba(10, 10, 10, 0.9) 0%, rgba(50, 50, 50, 0.2) 100%);
+        z-index: -1;
+    }
+
+.icon-part {
+    font-size: 3rem;
+    color: rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+.schedule-content {
+    text-align: justify;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+}
+
+.schedule-content-table {
+    color: white;
+}
+
+.container-fluid {
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+}

@@ -1,0 +1,45 @@
+﻿@page
+@model Gym.Notes.API.Pages.IndexModel
+@{
+    Layout = "~/Pages/Shared/_LandingPageLayout.cshtml";
+}
+
+<div>
+    <partial name="~/Pages/Partials/_Banner.cshtml" />
+</div>
+
+<div>
+    <partial name="~/Pages/Partials/_BuildForm.cshtml" />
+</div>
+
+<div class="mt-5 pt-5 mb-5 pb-5">
+    <partial name="~/Pages/Partials/_TrainingPlan.cshtml" />
+</div>
+
+<div>
+    <partial name="~/Pages/Partials/_Features.cshtml" />
+</div>
+
+@*Move to partial and logic to partial model*@
+<div class="mt-5 pt-5">
+    <div class="subscribe-section overflow-hidden">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <h2>Many more Features are Waiting!</h2>
+                <p class="p-sub">Thinking about overseas adventure travel? Have you put any thought into the best places to go when it comes to overseas adventure travel?</p>
+                <form method="post">
+                    <input asp-for="Input.Email" placeholder="Email Address"
+                           class="input-form" onfocus="this.placeholder = ''"
+                           onblur="this.placeholder = 'Email Address'">
+                    <button type="submit" class="main-button">Subscribe</button>
+                    <div asp-validation-summary="All" class="text-danger mt-3 pt-3"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div>
+    <partial name="~/Pages/Partials/_Footer.cshtml" />
+</div>
+

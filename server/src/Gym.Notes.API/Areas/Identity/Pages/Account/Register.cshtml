@@ -1,0 +1,114 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+@{
+    if (User.Identity.IsAuthenticated)
+    {
+        Response.Redirect(RedirectUrls.UserNotesUrl);
+    }
+}
+
+<div class="limiter">
+    <div class="login-container">
+        <div class="login-wrapper p-l-110 p-r-110 p-t-62 p-b-33">
+            <span class="login-form-title p-b-53">
+                Create account
+            </span>
+
+            @{
+                <div class="login-form-title p-b-0">
+                    <form id="external-account"
+                          asp-page="./ExternalLogin"
+                          asp-route-returnUrl="@Model.ReturnUrl"
+                          method="post">
+                        <div>
+                            @{
+                                var facebookProvider = Model.ExternalLogins?.FirstOrDefault(x => x.Name == "Facebook");
+                                var googleProvider = Model.ExternalLogins?.FirstOrDefault(x => x.Name == "Google");
+
+                                @if (facebookProvider != null)
+                                {
+                                    <p>
+                                        <button type="submit" class="facebook-button m-b-20" name="provider"
+                                                value="@facebookProvider.Name"
+                                                title="Log in using your
+                                        @facebookProvider.DisplayName account">
+                                            <i class="fa fa-facebook-official">
+                                                @facebookProvider.DisplayName
+                                            </i>
+                                        </button>
+                                    </p>
+                                }
+                                @if (googleProvider != null)
+                                {
+                                    <p>
+                                        <button type="submit" class="google-button m-b-20" name="provider"
+                                                value="@googleProvider.Name"
+                                                title="Log in using your
+                                        @googleProvider.DisplayName account">
+                                            <i class="fa fa-google">
+                                                @googleProvider.DisplayName
+                                            </i>
+                                        </button>
+                                    </p>
+                                }
+                            }
+                        </div>
+                    </form>
+                </div>
+            }
+
+            <form class="login-form validate-form flex-sb flex-w" method="post">
+
+                <div class="p-t-31 p-b-9">
+                    <span class="txt1">
+                        <label asp-for="Input.Email"></label>
+                    </span>
+                </div>
+                <div class="input-wrapper validate-input">
+                    <input asp-for="Input.Email" class="input" />
+                    <span asp-validation-for="Input.Email" class="focus-input-error"></span>
+                </div>
+
+                <div class="p-t-13 p-b-9">
+                    <span class="txt1">
+                        <label asp-for="Input.Password">
+                            Password
+                        </label>
+                    </span>
+                </div>
+                <div class="input-wrapper validate-input">
+                    <input asp-for="Input.Password" class="input" />
+                    <span asp-validation-for="Input.Password" class="focus-input-error"></span>
+                </div>
+
+                <div class="p-t-13 p-b-9">
+                    <span class="txt1">
+                        <label asp-for="Input.ConfirmPassword">
+                            Confirm password
+                        </label>
+                    </span>
+                </div>
+                <div class="input-wrapper validate-input">
+                    <input asp-for="Input.ConfirmPassword" class="input" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="focus-input-error"></span>
+                </div>
+
+                <div class="login-container-form-button m-t-17">
+                    <button type="submit" class="login-form-button">
+                        Register
+                    </button>
+                </div>
+            </form>
+            <div asp-validation-summary="All" class="text-danger"></div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,75 @@
+﻿:root {
+    --primary-color: #4caf50;
+    --secondary-color: #757575;
+    --text-color-primary: #757575;
+    --text-color-secondary: #fff;
+    --third-color: #2c684c;
+}
+
+h2 {
+    color: var(--text-color-secondary);
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.dark-text {
+    color: var(--text-color-primary)
+}
+
+.main-button {
+    display: inline-block;
+    padding: 13.5px 45px;
+    border-radius: 0;
+    font-size: 20px;
+    color: #fff;
+    background-color: var(--primary-color);
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-transform: capitalize;
+    background-size: 200% auto;
+    border: 1px solid transparent;
+}
+
+.input-form {
+    display: inline-block;
+    padding: 13.5px 45px;
+    border-radius: 0;
+    font-size: 20px;
+    color: var(--text-color-primary);
+    background-color: var(--text-color-secondary);
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    text-transform: capitalize;
+    background-size: 200% auto;
+    border: 1px solid transparent;
+}
+
+.main-button:hover {
+    background-color: var(--secondary-color);
+    color: #fff !important;
+}
+
+@media (max-width: 576px) {
+    .main-button {
+        padding: 10px 30px;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .main-button {
+        padding: 10px 30px;
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .main-button {
+        padding: 10px 30px;
+        margin-top: 30px;
+    }
+}

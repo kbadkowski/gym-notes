@@ -1,0 +1,9 @@
+﻿.card {
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    text-align: justify;
+}
+
+.icon {
+    line-height: 50px;
+    text-align: center;
+}

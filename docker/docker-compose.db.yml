@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: gymnotes.database
+    restart: always
+    environment:
+      - POSTGRES_USER:'postgres'
+      - POSTGRES_PASSWORD:'e6f7991d6150bcd029d28ea913cf9345'
+      - POSTGRES_DB:'gymnotes.database'
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+volumes:
+  db-data:

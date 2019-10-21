@@ -1,0 +1,11 @@
+﻿.card {
+    border: 0px solid rgba(0, 0, 0, 0.125);
+    text-align: justify;
+    color: var(--text-color-primary);
+}
+
+.icon {
+    line-height: 50px;
+    text-align: center;
+    color: var(--text-color-primary);
+}

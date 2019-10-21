@@ -1,0 +1,12 @@
+﻿namespace Gym.Notes.API.Areas.Identity.Pages
+{
+    public static class RedirectModel
+    {
+        public static string RedirectToAccountManage => "/Identity/Account/Manage";
+<<<<<<< HEAD
+        public static string RedirectToUserNotes => "http://localhost:8080";
+=======
+        public static string RedirectToUserNotes => "http://localhost:8080/loggedin";
+>>>>>>> Created view for user after logging in, cleaned up files, fixed fontawesome
+    }
+}

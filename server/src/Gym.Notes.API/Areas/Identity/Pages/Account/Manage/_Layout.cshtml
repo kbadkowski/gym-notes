@@ -1,0 +1,27 @@
+﻿@inject UserManager<IdentityUser> UserManager
+@{
+    Layout = "/Pages/Shared/_Layout.cshtml";
+}
+
+    <div class="container p-t-80">
+        <h1>
+            Hello @UserManager.GetUserName(User)!
+        </h1>
+        <hr />
+
+        <h2>Manage your account</h2>
+        <hr />
+
+        <div class="row p-t-50">
+            <div class="col-md-3">
+                <partial name="_ManageNav" />
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+    </div>
+
+@section Scripts {
+    @RenderSection("Scripts", required: false)
+}

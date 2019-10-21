@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject IWebHostEnvironment Environment
+@inject ICompositeViewEngine Engine
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Gym Notes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" href="~/Identity/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/fonts/fontawesome-free-5.15.3-web/css/all.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/partials/main.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/banner-partial.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/build-form-partial.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/training-plan-partial.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/features-partial.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/subscribe-partial.css">
+    <link rel="stylesheet" type="text/css" href="~/css/partials/footer-partial.css">
+    <!--===============================================================================================-->
+</head>
+<body>
+    <div>
+        @RenderBody()
+    </div>
+
+    <script src="~/Identity/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/Identity/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Identity/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
+

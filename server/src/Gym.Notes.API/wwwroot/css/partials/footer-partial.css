@@ -1,0 +1,7 @@
+﻿.footer-section {
+    background: var(--primary-color);
+    color: var(--text-color-secondary);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
